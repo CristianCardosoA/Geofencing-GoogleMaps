@@ -89,7 +89,7 @@ class ViewController: UIViewController , GMSMapViewDelegate{
     func showLifeEventView(anotation : GMSMarker){
         
         let image : UIImage = UIImage(named:"grandma.jpg")!
-        let customView = CustomViewController.initWithGeotification(name: "vv", bio : "bio", image: image, frame: CGRect(x: 0, y: view.frame.size.height - (view.frame.size.height * 0.420) , width: self.view.frame.width, height: (view.frame.size.height * 0.420) ))
+        let customView = CustomViewController.initWithGeotification(name: (anotation as! Geotification).note, bio : "bio", image: image, frame: CGRect(x: 0, y: view.frame.size.height - (view.frame.size.height * 0.420) , width: self.view.frame.width, height: (view.frame.size.height * 0.420) ))
         
         if !isCustomViewOpen {
             isCustomViewOpen = true
