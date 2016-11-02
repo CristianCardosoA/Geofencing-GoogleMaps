@@ -1,14 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Geofencing_GoogleMaps" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +18,47 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D0l-YF-aiF">
+                                <items>
+                                    <navigationItem title="Geotifications" id="Uq2-QC-hZk">
+                                        <barButtonItem key="leftBarButtonItem" image="CurrentLocation" id="IQX-rB-8tz">
+                                            <connections>
+                                                <action selector="currentLocation:" destination="BYZ-38-t0r" id="hNS-6P-YaV"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="TGl-0E-4fu">
+                                            <connections>
+                                                <action selector="add:" destination="BYZ-38-t0r" id="901-9X-G05"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lAX-rF-5e9">
+                                <frame key="frameInset" minY="64" width="375" height="583"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lAX-rF-5e9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="1e0-No-oZj"/>
+                            <constraint firstItem="D0l-YF-aiF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7kb-ks-Vca"/>
+                            <constraint firstAttribute="trailing" secondItem="D0l-YF-aiF" secondAttribute="trailing" id="AaG-Jz-FYe"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lAX-rF-5e9" secondAttribute="bottom" id="FWE-me-k8u"/>
+                            <constraint firstAttribute="trailing" secondItem="lAX-rF-5e9" secondAttribute="trailing" id="WpW-ur-Zph"/>
+                            <constraint firstItem="lAX-rF-5e9" firstAttribute="top" secondItem="D0l-YF-aiF" secondAttribute="bottom" id="ias-IR-KmJ"/>
+                            <constraint firstItem="D0l-YF-aiF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="m7q-bs-BCf"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="lAX-rF-5e9" id="npL-dZ-s1P"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="60" y="28.335832083958024"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="CurrentLocation" width="15" height="15"/>
+    </resources>
 </document>

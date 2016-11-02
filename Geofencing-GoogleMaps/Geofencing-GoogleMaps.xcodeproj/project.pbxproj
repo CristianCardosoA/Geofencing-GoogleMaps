@@ -14,6 +14,18 @@
 		FAD27CF11DC9AE75009171BE /* Geofencing_GoogleMaps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAD27CEF1DC9AE75009171BE /* Geofencing_GoogleMaps.xcdatamodeld */; };
 		FAD27CF31DC9AE75009171BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAD27CF21DC9AE75009171BE /* Assets.xcassets */; };
 		FAD27CF61DC9AE75009171BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAD27CF41DC9AE75009171BE /* LaunchScreen.storyboard */; };
+		FAD27CFE1DC9C7BD009171BE /* focus.png in Resources */ = {isa = PBXBuildFile; fileRef = FAD27CFD1DC9C7BD009171BE /* focus.png */; };
+		FAD27D001DC9C7C4009171BE /* ring.png in Resources */ = {isa = PBXBuildFile; fileRef = FAD27CFF1DC9C7C4009171BE /* ring.png */; };
+		FAD27D021DC9C7CF009171BE /* directions.png in Resources */ = {isa = PBXBuildFile; fileRef = FAD27D011DC9C7CF009171BE /* directions.png */; };
+		FAD27D041DC9C815009171BE /* point.png in Resources */ = {isa = PBXBuildFile; fileRef = FAD27D031DC9C815009171BE /* point.png */; };
+		FAD27D061DC9C81D009171BE /* grandma.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FAD27D051DC9C81D009171BE /* grandma.jpg */; };
+		FAD27D081DC9C82B009171BE /* TestLocations.gpx in Resources */ = {isa = PBXBuildFile; fileRef = FAD27D071DC9C82B009171BE /* TestLocations.gpx */; };
+		FAD27D0A1DC9C86C009171BE /* CustomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAD27D091DC9C86C009171BE /* CustomView.xib */; };
+		FAD27D0D1DC9CB37009171BE /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD27D0C1DC9CB37009171BE /* CustomViewController.swift */; };
+		FAD27D101DC9CBB6009171BE /* Geotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD27D0F1DC9CBB6009171BE /* Geotification.swift */; };
+		FAD27D131DC9CD12009171BE /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD27D121DC9CD12009171BE /* Utils.swift */; };
+		FAD27D151DC9CE0D009171BE /* CustomTapGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD27D141DC9CE0D009171BE /* CustomTapGestureRecognizer.swift */; };
+		FAD27D171DC9DC48009171BE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAD27D161DC9DC48009171BE /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +40,18 @@
 		FAD27CF21DC9AE75009171BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAD27CF51DC9AE75009171BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAD27CF71DC9AE75009171BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAD27CFD1DC9C7BD009171BE /* focus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = focus.png; sourceTree = "<group>"; };
+		FAD27CFF1DC9C7C4009171BE /* ring.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ring.png; sourceTree = "<group>"; };
+		FAD27D011DC9C7CF009171BE /* directions.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = directions.png; sourceTree = "<group>"; };
+		FAD27D031DC9C815009171BE /* point.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = point.png; sourceTree = "<group>"; };
+		FAD27D051DC9C81D009171BE /* grandma.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = grandma.jpg; sourceTree = "<group>"; };
+		FAD27D071DC9C82B009171BE /* TestLocations.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = TestLocations.gpx; sourceTree = "<group>"; };
+		FAD27D091DC9C86C009171BE /* CustomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
+		FAD27D0C1DC9CB37009171BE /* CustomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
+		FAD27D0F1DC9CBB6009171BE /* Geotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geotification.swift; sourceTree = "<group>"; };
+		FAD27D121DC9CD12009171BE /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		FAD27D141DC9CE0D009171BE /* CustomTapGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTapGestureRecognizer.swift; sourceTree = "<group>"; };
+		FAD27D161DC9DC48009171BE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAD27D171DC9DC48009171BE /* CoreLocation.framework in Frameworks */,
 				2FB5BE87B9139A8D76B01BE9 /* libPods-Geofencing-GoogleMaps.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -54,6 +79,7 @@
 		2F763591EB71DF95B5BD5856 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FAD27D161DC9DC48009171BE /* CoreLocation.framework */,
 				8CB3792A1E087B7D43EC7831 /* libPods-Geofencing-GoogleMaps.a */,
 			);
 			name = Frameworks;
@@ -80,15 +106,50 @@
 		FAD27CE71DC9AE75009171BE /* Geofencing-GoogleMaps */ = {
 			isa = PBXGroup;
 			children = (
+				FAD27D111DC9CD06009171BE /* utils */,
+				FAD27D0E1DC9CBAC009171BE /* object */,
+				FAD27D0B1DC9C873009171BE /* views */,
 				FAD27CE81DC9AE75009171BE /* AppDelegate.swift */,
 				FAD27CEA1DC9AE75009171BE /* ViewController.swift */,
 				FAD27CEC1DC9AE75009171BE /* Main.storyboard */,
 				FAD27CF21DC9AE75009171BE /* Assets.xcassets */,
 				FAD27CF41DC9AE75009171BE /* LaunchScreen.storyboard */,
 				FAD27CF71DC9AE75009171BE /* Info.plist */,
+				FAD27CFD1DC9C7BD009171BE /* focus.png */,
+				FAD27CFF1DC9C7C4009171BE /* ring.png */,
+				FAD27D031DC9C815009171BE /* point.png */,
+				FAD27D011DC9C7CF009171BE /* directions.png */,
+				FAD27D051DC9C81D009171BE /* grandma.jpg */,
 				FAD27CEF1DC9AE75009171BE /* Geofencing_GoogleMaps.xcdatamodeld */,
+				FAD27D071DC9C82B009171BE /* TestLocations.gpx */,
 			);
 			path = "Geofencing-GoogleMaps";
+			sourceTree = "<group>";
+		};
+		FAD27D0B1DC9C873009171BE /* views */ = {
+			isa = PBXGroup;
+			children = (
+				FAD27D0C1DC9CB37009171BE /* CustomViewController.swift */,
+				FAD27D091DC9C86C009171BE /* CustomView.xib */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
+		FAD27D0E1DC9CBAC009171BE /* object */ = {
+			isa = PBXGroup;
+			children = (
+				FAD27D0F1DC9CBB6009171BE /* Geotification.swift */,
+			);
+			name = object;
+			sourceTree = "<group>";
+		};
+		FAD27D111DC9CD06009171BE /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				FAD27D141DC9CE0D009171BE /* CustomTapGestureRecognizer.swift */,
+				FAD27D121DC9CD12009171BE /* Utils.swift */,
+			);
+			name = utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,9 +214,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAD27CFE1DC9C7BD009171BE /* focus.png in Resources */,
+				FAD27D0A1DC9C86C009171BE /* CustomView.xib in Resources */,
+				FAD27D001DC9C7C4009171BE /* ring.png in Resources */,
 				FAD27CF61DC9AE75009171BE /* LaunchScreen.storyboard in Resources */,
 				FAD27CF31DC9AE75009171BE /* Assets.xcassets in Resources */,
+				FAD27D061DC9C81D009171BE /* grandma.jpg in Resources */,
 				FAD27CEE1DC9AE75009171BE /* Main.storyboard in Resources */,
+				FAD27D041DC9C815009171BE /* point.png in Resources */,
+				FAD27D081DC9C82B009171BE /* TestLocations.gpx in Resources */,
+				FAD27D021DC9C7CF009171BE /* directions.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +285,10 @@
 				FAD27CEB1DC9AE75009171BE /* ViewController.swift in Sources */,
 				FAD27CF11DC9AE75009171BE /* Geofencing_GoogleMaps.xcdatamodeld in Sources */,
 				FAD27CE91DC9AE75009171BE /* AppDelegate.swift in Sources */,
+				FAD27D101DC9CBB6009171BE /* Geotification.swift in Sources */,
+				FAD27D0D1DC9CB37009171BE /* CustomViewController.swift in Sources */,
+				FAD27D151DC9CE0D009171BE /* CustomTapGestureRecognizer.swift in Sources */,
+				FAD27D131DC9CD12009171BE /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

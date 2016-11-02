@@ -8,15 +8,29 @@
 
 import UIKit
 import CoreData
+import GoogleMaps
+import CoreLocation
+
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    let locationManager = CLLocationManager()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        GMSServices.provideAPIKey("AIzaSyD3CdWsM56gro2hTXDBJG-1VIHG9oKGfb8")
+        locationManager.delegate = self
+        locationManager.requestAlwaysAuthorization()
+        
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) {(accepted, error) in
+            if !accepted {
+                print("Notification access denied.")
+            }
+        }
         return true
     }
 
@@ -88,6 +102,95 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    
+    func handleEventEnter(forRegion region: CLRegion!) {
+        
+        if UIApplication.shared.applicationState == .active {
+            
+            let controller = window?.rootViewController as! ViewController
+            guard let message = note(fromRegionIdentifier: region.identifier, viewController: controller) else { return }
+            controller.showLifeEventView(anotation: message)
+            
+        }else{
+            
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy/MM/dd HH:mm"
+            let someDateTime = formatter.date(from: "2016/11/01 22:23")
+            scheduleNotification(at: someDateTime!)
+        }
+    }
+    
+    func scheduleNotification(at date: Date) {
+        let calendar = NSCalendar.current
+        let components = calendar.dateComponents(in: .current, from: date)
+        let newComponents = DateComponents(calendar: calendar, timeZone: .current, month: components.month, day: components.day, hour: components.hour, minute: components.minute)
+        
+        let trigger = UNCalendarNotificationTrigger(dateMatching: newComponents, repeats: false)
+        
+        let content = UNMutableNotificationContent()
+        content.title = "Tutorial Reminder"
+        content.body = "Just a reminder to read your tutorial over at appcoda.com!"
+        content.sound = UNNotificationSound.default()
+        
+        let request = UNNotificationRequest(identifier: "textNotification", content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
+        UNUserNotificationCenter.current().add(request) {(error) in
+            if let error = error {
+                print("Uh oh! We had an error: \(error)")
+            }
+        }
+    }
+    
+    func handleEventExit(forRegion region: CLRegion!) {
+        
+        if UIApplication.shared.applicationState == .active {
+            let controller = window?.rootViewController as! ViewController
+            guard let message = note(fromRegionIdentifier: region.identifier, viewController: controller) else { return }
+            controller.removeSubview(anotation: message)
+        }else{
+            
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy/MM/dd HH:mm"
+            let someDateTime = formatter.date(from: "2016/11/01 22:23")
+            scheduleNotification(at: someDateTime!)
+            
+        }
+    }
+    
+    func note(fromRegionIdentifier identifier: String, viewController : ViewController) -> GMSMarker? {
+        
+        var index = 0
+        
+        if viewController.geotifications.count > 0 {
+            for i in 0..<viewController.geotifications.count {
+                if viewController.geotifications[i].identifier == identifier{
+                    index = i
+                }
+            }
+            return viewController.geotifications[index]
+            
+        }else{
+            return nil
+        }
+        
+    }
 
+}
+
+extension AppDelegate: CLLocationManagerDelegate {
+    
+    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+        if region is CLCircularRegion {
+            handleEventEnter(forRegion: region)
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
+        if region is CLCircularRegion {
+            handleEventExit(forRegion: region)
+        }
+    }
+    
 }
 
