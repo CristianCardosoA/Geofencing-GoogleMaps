@@ -115,7 +115,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             let formatter = DateFormatter()
             formatter.dateFormat = "yyyy/MM/dd HH:mm"
-            let someDateTime = formatter.date(from: "2016/11/01 22:23")
+            let someDateTime = formatter.date(from: "2016/11/02 3:35")
             scheduleNotification(at: someDateTime!)
         }
     }
@@ -152,7 +152,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             let formatter = DateFormatter()
             formatter.dateFormat = "yyyy/MM/dd HH:mm"
-            let someDateTime = formatter.date(from: "2016/11/01 22:23")
+            let someDateTime = formatter.date(from: "2016/11/02 3:35")
             scheduleNotification(at: someDateTime!)
             
         }
